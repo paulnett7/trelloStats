@@ -8,11 +8,11 @@ import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-#set variables from command line
-# if len(sys.argv) != 2:
-#     print('Please input password for email.')
-#     sys.exit()
-# password = sys.argv[1]
+set variables from command line
+if len(sys.argv) != 2:
+    print('Please input password for email.')
+    sys.exit()
+    password = sys.argv[1]
 
 #Paul Nettleton's API Key and Authorization token
 apiKey = 'a22c6d69c7c3264f73545cd46b8a83e6'
@@ -80,10 +80,10 @@ def mailMe(emailBody):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('prn15', 'NettIP1281')
+    server.login('prn15', password)
 
     sender = 'prn15@case.edu'
-    recipient = 'prn15@case.edu'
+    recipient = 'thinkbox-party@googlegroups.com'
     msg = MIMEMultipart()
     msg['Subject'] = 'Weekly Trello Awards'
     msg['From'] = sender
