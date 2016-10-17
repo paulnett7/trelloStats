@@ -1,3 +1,7 @@
+#version 1.0
+#Written by Paul Nettleton (based off Google Script written by Jason Kuster)
+#for internal use at Sears think[box] at CWRU
+
 import requests
 import smtplib
 import json
@@ -125,7 +129,7 @@ def getTop(actions):
 
 #removes the full times from the top processed cards
 def removeFullTimes(members):
-    fullTimes = ["Ian Charnas", "Benjamin Guengerich", "Ruth D'Emilia", "Raymond Krajci", "Marcus Brathwaite"]
+    fullTimes = ["Ian Charnas", "Benjamin Guengerich", "Ruth D'Emilia", "Raymond Krajci", "Marcus Brathwaite", "Tiffany McNamara", "Marshall Nill"]
     removeIndices = []
 
     i = 0
